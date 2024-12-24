@@ -1,14 +1,23 @@
 {
-  "name": "vue-show-more",
-  "version": "0.0.1-beta",
-  "description": "A Vue 3 component for expanding/collapsing long text content",
+  "name": "@showmore/vue",
+  "version": "1.0.0",
+  "description": "A lightweight Vue 3 component for expanding/collapsing long text content",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:YoungDan-hero/vue3-show-more.git"
   },
   "keywords": [
     "vue",
@@ -17,12 +26,17 @@
     "expand",
     "collapse",
     "text",
-    "component"
+    "component",
+    "typescript"
   ],
-  "author": "",
+  "author": "YoungDan",
   "license": "MIT",
-  "dependencies": {
-    "vue": "^3.3.4"
+  "bugs": {
+    "url": "https://github.com/YoungDan-hero/vue3-show-more/issues"
+  },
+  "homepage": "https://github.com/YoungDan-hero/vue3-show-more/blob/main/README.md",
+  "peerDependencies": {
+    "vue": "^3.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
@@ -30,6 +44,8 @@
     "@vue/runtime-core": "^3.5.13",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
+    "vite-plugin-dts": "^4.4.0",
+    "vue": "^3.3.4",
     "vue-tsc": "^1.8.5"
   }
 }
