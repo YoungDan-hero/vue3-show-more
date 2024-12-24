@@ -5,6 +5,7 @@ interface Props {
     class?: string;
     expandButtonClass?: string;
     actionPosition?: "inline" | "bottom";
+    maskBackground?: string;
 }
 declare function __VLS_template(): {
     attrs: Partial<{}>;
@@ -39,6 +40,7 @@ declare const __VLS_component: import('../../node_modules/vue').DefineComponent<
     class: string;
     expandButtonClass: string;
     actionPosition: "inline" | "bottom";
+    maskBackground: string;
 }, {}, {}, {}, string, import('../../node_modules/vue').ComponentProvideOptions, false, {}, HTMLDivElement>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;

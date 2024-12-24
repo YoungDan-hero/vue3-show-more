@@ -1,6 +1,5 @@
 import { defineComponent, computed, ref, nextTick, onMounted, onUnmounted, openBlock, createElementBlock, normalizeClass, createElementVNode, normalizeStyle, renderSlot, withModifiers, toDisplayString, createCommentVNode } from "vue";
 const _hoisted_1 = { class: "vue-show-more__text" };
-const _hoisted_2 = { class: "vue-show-more__text" };
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "ShowMore",
   props: {
@@ -9,7 +8,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     collapseText: { default: "收起" },
     class: { default: "" },
     expandButtonClass: { default: "" },
-    actionPosition: { default: "bottom" }
+    actionPosition: { default: "bottom" },
+    maskBackground: { default: "white" }
   },
   emits: ["expand"],
   setup(__props, { emit: __emit }) {
@@ -106,6 +106,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         showButton.value && _ctx.actionPosition === "inline" && !isExpanded.value ? (openBlock(), createElementBlock("div", {
           key: 0,
           class: "vue-show-more__mask",
+          style: normalizeStyle({
+            background: `linear-gradient(to right, transparent, ${_ctx.maskBackground} 3em)`
+          }),
           onClick: withModifiers(toggleExpand, ["stop"])
         }, [
           renderSlot(_ctx.$slots, "action", {
@@ -113,9 +116,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             expandText: _ctx.expandText,
             collapseText: _ctx.collapseText
           }, () => [
-            createElementVNode("span", _hoisted_1, toDisplayString(_ctx.expandText), 1)
+            createElementVNode("span", {
+              class: "vue-show-more__text",
+              style: normalizeStyle({ background: _ctx.maskBackground })
+            }, toDisplayString(_ctx.expandText), 5)
           ], true)
-        ])) : createCommentVNode("", true),
+        ], 4)) : createCommentVNode("", true),
         showButton.value && (_ctx.actionPosition === "bottom" || isExpanded.value) ? (openBlock(), createElementBlock("span", {
           key: 1,
           class: "vue-show-more__action-bottom",
@@ -126,14 +132,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             expandText: _ctx.expandText,
             collapseText: _ctx.collapseText
           }, () => [
-            createElementVNode("span", _hoisted_2, toDisplayString(isExpanded.value ? _ctx.collapseText : _ctx.expandText), 1)
+            createElementVNode("span", _hoisted_1, toDisplayString(isExpanded.value ? _ctx.collapseText : _ctx.expandText), 1)
           ], true)
         ])) : createCommentVNode("", true)
       ], 2);
     };
   }
 });
-const ShowMore_vue_vue_type_style_index_0_scoped_c64aef8e_lang = "";
+const ShowMore_vue_vue_type_style_index_0_scoped_8e9cc5e6_lang = "";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -141,7 +147,7 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const ShowMore = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-c64aef8e"]]);
+const ShowMore = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-8e9cc5e6"]]);
 const index = {
   install: (app) => {
     app.component("ShowMore", ShowMore);

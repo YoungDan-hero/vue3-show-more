@@ -1,6 +1,6 @@
 {
   "name": "@kiko-yd/vue-show-more",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "A lightweight Vue 3 component for expanding/collapsing long text content",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",

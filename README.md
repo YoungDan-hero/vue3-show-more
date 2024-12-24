@@ -19,6 +19,12 @@ npm install @kiko-yd/vue-show-more
 yarn add @kiko-yd/vue-show-more
 ```
 
+```bash
+//main.ts
+
+import "@kiko-yd/vue-show-more/dist/style.css";
+```
+
 ## 使用方法
 
 ### 基础用法
