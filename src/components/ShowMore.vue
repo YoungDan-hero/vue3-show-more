@@ -20,6 +20,9 @@
     <div
       v-if="showButton && actionPosition === 'inline' && !isExpanded"
       class="vue-show-more__mask"
+      :style="{
+        background: `linear-gradient(to right, transparent, ${maskBackground} 3em)`,
+      }"
       @click.stop="toggleExpand"
     >
       <slot
@@ -28,7 +31,12 @@
         :expand-text="expandText"
         :collapse-text="collapseText"
       >
-        <span class="vue-show-more__text">{{ expandText }}</span>
+        <span
+          class="vue-show-more__text"
+          :style="{ background: maskBackground }"
+        >
+          {{ expandText }}
+        </span>
       </slot>
     </div>
 
@@ -62,6 +70,7 @@ interface Props {
   class?: string;
   expandButtonClass?: string;
   actionPosition?: "inline" | "bottom";
+  maskBackground?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -71,6 +80,7 @@ const props = withDefaults(defineProps<Props>(), {
   class: "",
   expandButtonClass: "",
   actionPosition: "bottom",
+  maskBackground: "white",
 });
 
 const customClass = computed(() => props.class);
@@ -183,7 +193,6 @@ onUnmounted(() => {
   right: 0;
   bottom: 0;
   cursor: pointer;
-  background: linear-gradient(to right, transparent, white 3em);
   padding-left: 3em;
 }
 
@@ -192,7 +201,6 @@ onUnmounted(() => {
   z-index: 2;
   display: inline-block;
   color: #2196f3;
-  background: white;
   font: inherit;
 }
 

@@ -49,6 +49,7 @@ import { ShowMore } from "vue-show-more";
     action-position="inline"
     expand-text="展开"
     collapse-text="收起"
+    mask-background="#f5f5f5"
   >
     <p style="font-size: 18px">这是一段很长的文本...</p>
   </ShowMore>
@@ -81,6 +82,7 @@ import { ShowMore } from "vue-show-more";
 | class             | string               | -        | 自定义样式类名                                                                    |
 | expandButtonClass | string               | -        | 展开按钮的自定义样式类名                                                          |
 | actionPosition    | 'inline' \| 'bottom' | 'bottom' | 展开/收起按钮的位置。'inline' 表示按钮跟随在文本末尾，'bottom' 表示按钮在新行显示 |
+| maskBackground    | string               | 'white'  | 内联模式下的背景色，用于遮罩层和按钮背景，应与容器背景色保持一致                  |
 
 ## 插槽
 
