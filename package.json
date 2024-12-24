@@ -1,6 +1,6 @@
 {
   "name": "vue-show-more",
-  "version": "1.0.0",
+  "version": "0.0.1-beta",
   "description": "A Vue 3 component for expanding/collapsing long text content",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
