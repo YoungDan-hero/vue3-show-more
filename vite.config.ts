@@ -22,6 +22,7 @@ export default defineConfig({
       entry: resolve(__dirname, "src/index.ts"),
       name: "VueShowMore",
       fileName: (format) => `index.${format}.js`,
+      formats: ["es", "umd"],
     },
     rollupOptions: {
       external: ["vue"],
@@ -32,5 +33,7 @@ export default defineConfig({
         exports: "named",
       },
     },
+    sourcemap: true,
+    minify: "terser",
   },
 });

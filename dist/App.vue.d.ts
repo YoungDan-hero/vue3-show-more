@@ -1,0 +1,2 @@
+declare const _default: import('../node_modules/vue').DefineComponent<{}, {}, {}, {}, {}, import('../node_modules/vue').ComponentOptionsMixin, import('../node_modules/vue').ComponentOptionsMixin, {}, string, import('../node_modules/vue').PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import('../node_modules/vue').ComponentProvideOptions, true, {}, HTMLDivElement>;
+export default _default;

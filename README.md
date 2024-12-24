@@ -14,9 +14,9 @@
 ## 安装
 
 ```bash
-npm install vue-show-more
+npm install @kiko-yd/vue-show-more
 # 或
-yarn add vue-show-more
+yarn add @kiko-yd/vue-show-more
 ```
 
 ## 使用方法
